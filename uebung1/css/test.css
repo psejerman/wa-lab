@@ -1,0 +1,17 @@
+
+ul li {
+	display: inline;
+	float: left;
+	padding: 5px;
+	border: 1px solid green;
+}
+ul a {
+	/*border: 1px solid red;*/
+	display: block;
+}
+ul a:active {
+  background-color: blue;
+}
+ul a:visited {
+  background-color: green;
+}

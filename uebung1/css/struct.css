@@ -1,0 +1,34 @@
+#wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#navi ul { /* Browser-Css reset*/
+		margin: 0px;
+		padding: 0px;
+}
+
+#navi li {
+	display: inline;
+	float: left;
+	margin: 1em;
+}
+
+#navi a {
+	display: block;
+	padding 1em;
+	/*border: 1px solid red;*/
+}
+
+.center{
+	display: table-cell;
+	text-align: center !important;
+}
+.left{
+	display: table-cell;
+	text-align: left !important;
+}
+.right{
+	display: table-cell;
+	text-align: right !important;
+}
