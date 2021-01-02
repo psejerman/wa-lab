@@ -35,18 +35,22 @@
     <!--main Start-->
 
     <main id="form-layout">
-      <form action="index.html" method="post">
+      <form action="post.php" method="post">
         <div class="grid-cell">
-          <input type="text" name="vname" value="Vorname">
+          <label for="vname">Vorname:</label>
+          <input id="vname" type="text" name="vname">
         </div>
         <div class="grid-cell">
-          <input type="text" name="nname" value="Nachname">
+          <label for="nname">Nachname:</label>
+          <input id="nname" type="text" name="nname">
         </div>
         <div class="grid-cell">
-          <input type="text" name="strasse" value="Starße">
+          <label for="stasse">Straße:</label>
+          <input id="stasse" type="text" name="strasse">
         </div>
         <div class="grid-cell">
-          <input type="text" name="hsnr" value="HsNr">
+          <label for="hsnr">Hausnummer:</label>
+          <input id="hsnr" type="text" name="hsnr">
         </div>
         <div class="grid-cell">
           <button type="submit" name="submitform">Absenden</button>
