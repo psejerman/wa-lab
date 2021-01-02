@@ -67,7 +67,6 @@ div.grid-cell {
   /*Unterteilung in 2X2 Zellen jeweils eine Fraction*/
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr 1fr;
-
   padding: 5%;
 }
 

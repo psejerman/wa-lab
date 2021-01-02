@@ -35,25 +35,38 @@
     <!--main Start-->
 
     <main id="form-layout">
-      <form action="post.php" method="post">
+      <form action="cgi-bin/post.php" method="post">
         <div class="grid-cell">
-          <label for="vname">Vorname:</label>
-          <input id="vname" type="text" name="vname">
+          <label for="email">Email:</label>
+          <input id="email" type="email" name="email" required>
         </div>
         <div class="grid-cell">
-          <label for="nname">Nachname:</label>
-          <input id="nname" type="text" name="nname">
+          <label for="name">Nachname:</label>
+          <input id="name" type="text" name="name">
         </div>
         <div class="grid-cell">
-          <label for="stasse">Straße:</label>
-          <input id="stasse" type="text" name="strasse">
+          <label for="password">Passwort:</label>
+          <input id="password" type="password" name="password" required>
         </div>
         <div class="grid-cell">
-          <label for="hsnr">Hausnummer:</label>
-          <input id="hsnr" type="text" name="hsnr">
+          <label for="date">Datum:</label>
+          <input id="date" type="date" name="date">
         </div>
         <div class="grid-cell">
-          <button type="submit" name="submitform">Absenden</button>
+          <label for="male">Männl.</label>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="female">Weibl.</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="other">And.</label>
+          <input type="radio" id="other" name="gender" value="other">
+
+        </div>
+
+        <div class="grid-cell">
+          <button type="submit" name="submitform" value="submit">Absenden</button>
+        </div>
+        <div class="grid-cell">
+          <button type="reset" name="resetform">Zurücksetzen</button>
         </div>
       </form>
     </main>
