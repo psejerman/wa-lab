@@ -56,6 +56,7 @@ input[type=text]:hover, input[type=text]:focus {
 }
 
 button[type=submit] {
+  width: 100%;
   background-color: var(--primary);
   border: 1px solid black;
   color: white;
@@ -69,6 +70,6 @@ button[type=submit]:hover {
 button[type=submit]:focus {
 
 }
-div {
+
 
 /*--------------Intupts--ende--------------------*/
