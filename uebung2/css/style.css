@@ -4,8 +4,8 @@
   --harsh: #B332AF;
   --primary: #8850EA;
   --secondary: #7D91F7;
-
 }
+
 * {
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -23,10 +23,10 @@ h4, h5, h6{
   color: var(--primary);
 }
 p {
+  /* Blocksatz */
   text-align: justify;
   text-justify: auto;
   line-height: 1.5em;
-  padding: 20%;
 }
 .list-nondeco {
   list-style: none;
@@ -34,41 +34,47 @@ p {
 }
 
 /*--------------Intupts--------------------------*/
-input[type=text], button[type=submit]{
-  border-radius: 0;
-  height: 2em;
-  font-size: 1.6em;
-}
 
-
-input[type=text] {
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=date],
+button[type=submit],
+button[type=reset] {
   width:100%;
   border-radius: 0;
-  border: 1px solid var(--primary);
   height: 2em;
   font-size: 1.6em;
-  padding-left: 2%;
-  margin: 3% 0;
 }
 
-input[type=text]:hover, input[type=text]:focus {
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=date] {
+  border: 1px solid var(--primary);
+}
+
+input[type=text]:hover,
+input[type=password]:hover,
+input[type=email]:hover,
+input[type=date]:hover,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=date]:focus {
   border: 2px solid var(--harsh);
 }
 
-button[type=submit] {
+button[type=submit],
+button[type=reset] {
   background-color: var(--primary);
   border: 1px solid black;
   color: white;
 }
 
-button[type=submit]:hover {
+button[type=submit]:hover,
+button[type=reset]:hover {
   background-color: var(--dark);
   border: 2px solid var(--harsh);
 }
-
-button[type=submit]:focus {
-
-}
-div {
-
 /*--------------Intupts--ende--------------------*/

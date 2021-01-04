@@ -2,8 +2,8 @@
 * {
   box-sizing: border-box;
 }
-body {
 
+body {
   margin: 0; /* Browser CSS reset */
   padding: 0; /* Browser CSS reset */
   display: grid; /* Einleiten des CSS Grid */
@@ -45,18 +45,14 @@ div.grid-cell {
 /*------------------Indeexcontent CSS-------------------------------------*/
 #index-layout {
   display: grid;
-  /*Unterteilung in 2X2 Zellen jeweils eine Fraction*/
+  /*Unterteilung in 2 Spalten X 2 Zellen jeweils eine Fraction*/
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr 1fr;
-
 }
-
-
-
 
 #videos-layout {
   display: grid;
-  /Unterteilung in 2X2 Zellen jeweils eine Fraction/
+  /*Unterteilung in 2 Spalten X 4 Zellen jeweils eine Fraction*/
   grid-template-rows: auto auto auto auto;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:  "svg gif"
@@ -65,6 +61,12 @@ div.grid-cell {
   padding: 5%;
 }
 
+#form-layout {
+  display: grid;
+  /*Unterteilung in 2X2 Zellen jeweils eine Fraction*/
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr 1fr;
+}
 
 .svg {
     grid-area: svg;
@@ -72,17 +74,11 @@ div.grid-cell {
 }
 
 .gif {
-
     text-align: center;
     grid-area: gif;
 }
 
-
 .video {
     text-align: center;
     grid-area: video;
-}
-
-.video p {
-
 }
