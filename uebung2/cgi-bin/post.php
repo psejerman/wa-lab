@@ -7,5 +7,5 @@
     echo $_POST['date'];
     echo "</b></br>Dein Gender ist: <b>";
     echo $_POST['gender'];
-    echo "</b></br></br><a href=\"javascript:history.go(-1)\">GO BACK</a>";
+    echo "<a href='../form.html'>GO BACK</a>";
 ?>
