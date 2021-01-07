@@ -50,6 +50,7 @@ div.grid-cell {
   grid-template-columns: 1fr 1fr;
 }
 
+/*------------------Videoscontent CSS-------------------------------------*/
 #videos-layout {
   display: grid;
   /*Unterteilung in 2 Spalten X 4 Zellen jeweils eine Fraction*/

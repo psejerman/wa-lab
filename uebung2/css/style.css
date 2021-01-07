@@ -64,7 +64,9 @@ input[type=email]:focus,
 input[type=date]:focus {
   border: 2px solid var(--harsh);
 }
+/*--------------Intupts--ende--------------------*/
 
+/* Style des Formular-Buttons */
 button[type=submit],
 button[type=reset] {
   background-color: var(--primary);
@@ -77,4 +79,4 @@ button[type=reset]:hover {
   background-color: var(--dark);
   border: 2px solid var(--harsh);
 }
-/*--------------Intupts--ende--------------------*/
+
