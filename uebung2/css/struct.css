@@ -62,13 +62,6 @@ div.grid-cell {
   padding: 5%;
 }
 
-#form-layout {
-  display: grid;
-  /*Unterteilung in 2X2 Zellen jeweils eine Fraction*/
-  grid-template-rows: auto auto auto auto;
-  grid-template-columns: 1fr 1fr;
-}
-
 .svg {
     grid-area: svg;
     text-align: center;
@@ -82,4 +75,11 @@ div.grid-cell {
 .video {
     text-align: center;
     grid-area: video;
+}
+#form-layout {
+  display: grid;
+  /*TO DO*/
+  /*Unterteilung in 4 Zeilen X 2 Spalten jeweils eine Fraction*/
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr 1fr;
 }
