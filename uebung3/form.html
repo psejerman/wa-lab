@@ -1,0 +1,32 @@
+<form action="cgi-bin/post.php" method="post">
+  <div class="grid-cell">
+    <label for="email">Email:</label>
+    <input id="email" type="email" name="email" required>
+  </div>
+  <div class="grid-cell">
+    <label for="name">Nachname:</label>
+    <input id="name" type="text" name="name">
+  </div>
+  <div class="grid-cell">
+    <label for="password">Passwort:</label>
+    <input id="password" type="password" name="password" required>
+  </div>
+  <div class="grid-cell">
+    <label for="date">Datum:</label>
+    <input id="date" type="date" name="date">
+  </div>
+  <div class="grid-cell">
+    <label for="male">Männlich</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="female">Weiblich</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="other">Andere</label>
+    <input type="radio" id="other" name="gender" value="other">
+  </div>
+  <div class="grid-cell">
+    <button type="submit" name="submitform" value="submit">Absenden</button>
+  </div>
+  <div class="grid-cell">
+    <button type="reset" name="resetform">Zurücksetzen</button>
+  </div>
+</form>
