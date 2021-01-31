@@ -9,18 +9,18 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/functions.js"></script>
   </head>
-  <body>
+  <body onload="loadContent('home')">
     <!--header Start-->
     <header>
-      <h1>Indexseite</h1>
+      <h1 id="page_title"></h1>
     </header>
     <!--header Ende-->
     <!--nav Start-->
     <nav>
       <ul>
-        <li><span onclick="ajax('home')">Home</span></li>
-        <li><span onclick="ajax('blog')">Blog</span></li>
-        <li><span onclick="ajax('form')">Formular</span></li>
+        <li><span onclick="loadContent('home')">Home</span></li>
+        <li><span onclick="loadContent('blog')">Blog</span></li>
+        <li><span onclick="loadContent('formular')">Formular</span></li>
       </ul>
     </nav>
     <!--nav Ende-->

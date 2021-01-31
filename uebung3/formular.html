@@ -1,4 +1,4 @@
-<form action="cgi-bin/post.php" method="post">
+<form method="post" id="formular1" action="cgi-bin/backend.php">
   <div class="grid-cell">
     <label for="email">Email:</label>
     <input id="email" type="email" name="email" required>
@@ -24,9 +24,12 @@
     <input type="radio" id="other" name="gender" value="other">
   </div>
   <div class="grid-cell">
-    <button type="submit" name="submitform" value="submit">Absenden</button>
+    <button type="button" onclick="sendForm()">Absenden</button>
   </div>
   <div class="grid-cell">
-    <button type="reset" name="resetform">Zurücksetzen</button>
+    <button type="reset">Zurücksetzen</button>
+    <div id="demo">
+
+    </div>
   </div>
 </form>
