@@ -1,3 +1,10 @@
+function showNavigator() {
+  document.getElementById("navigator-type").innerHTML =
+  "Browser: " + navigator.appName;
+}
+
+
+
 function loadContent(param) {
   // Instanz von XMLHttpRequest()
   var xhttp = new XMLHttpRequest();
@@ -28,7 +35,7 @@ function sendForm() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       //Schreiben der serverside Antwort ins demo-div
-     document.getElementById("demo").innerHTML = this.responseText;
+     document.getElementById("srv-answer").innerHTML = this.responseText;
     }
   };
   //Definieren der Verbindungsparameter zum Serversidescript

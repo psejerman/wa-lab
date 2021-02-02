@@ -1,35 +1,58 @@
 <form method="post" id="formular1" action="cgi-bin/backend.php">
-  <div class="grid-cell">
-    <label for="email">Email:</label>
-    <input id="email" type="email" name="email" required>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input id="email" class="form-control" type="email" name="email" required>
+      </div>
+    </div>
   </div>
-  <div class="grid-cell">
-    <label for="name">Nachname:</label>
-    <input id="name" type="text" name="name">
+  <div class="row">
+    <div class="col">
+      <label for="name">Nachname:</label>
+      <input id="name" class="form-control" type="text" name="name">
+    </div>
+    <div class="col">
+      <label for="password">Passwort:</label>
+      <input id="password" class="form-control" type="password" name="password" required>
+    </div>
   </div>
-  <div class="grid-cell">
-    <label for="password">Passwort:</label>
-    <input id="password" type="password" name="password" required>
+  <div class="row">
+    <div class="col">
+      <label for="date">Datum:</label>
+      <input id="date" class="form-control" type="date" name="date">
+    </div>
+    <div class="col">
+      <div class="form-check form-check-inline">
+        <label class="form-check-label" for="male">Männlich</label>
+        <input class="form-check-input" type="radio" id="male" name="gender" value="male">
+      </div>
+      <div class="form-check form-check-inline">
+        <label class="form-check-label" for="female">Weiblich</label>
+        <input class="form-check-input" type="radio" id="female" name="gender" value="female">
+      </div>
+      <div class="form-check form-check-inline">
+        <label class="form-check-label" for="other">Andere</label>
+        <input class="form-check-input" type="radio" id="other" name="gender" value="other">
+      </div>
+    </div>
   </div>
-  <div class="grid-cell">
-    <label for="date">Datum:</label>
-    <input id="date" type="date" name="date">
+  <div class="row">
+    <div class="col">
+      <button type="button" class="btn success" onclick="sendForm()">Absenden</button>
+    </div>
+    <div class="col">
+      <button type="reset" class=" btn danger">Zurücksetzen</button>
+    </div>
   </div>
-  <div class="grid-cell">
-    <label for="male">Männlich</label>
-    <input type="radio" id="male" name="gender" value="male">
-    <label for="female">Weiblich</label>
-    <input type="radio" id="female" name="gender" value="female">
-    <label for="other">Andere</label>
-    <input type="radio" id="other" name="gender" value="other">
-  </div>
-  <div class="grid-cell">
-    <button type="button" onclick="sendForm()">Absenden</button>
-  </div>
-  <div class="grid-cell">
-    <button type="reset">Zurücksetzen</button>
-    <div id="demo">
+  <div class="row">
+    <div id="col">
 
+      <div class="alert alert-warning alert-dismissible fade show" id="srv-answer" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
     </div>
   </div>
 </form>
