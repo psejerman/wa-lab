@@ -1,58 +1,10 @@
-/* Deklaration der Farbpalette */
-:root {
-  --dark: #490D47;
-  --harsh: #B332AF;
-  --primary: #8850EA;
-  --secondary: #7D91F7;
-}
-
-nav, footer {
-  background-color: var(--dark);
-}
-
 nav span {
-  color: white;
   cursor: default;
 }
 
 nav span:hover {
   text-decoration: underline;
 }
-
-h4, h5, h6{
-  color: var(--primary);
-}
-
-/*--------------Intupts--------------------------*/
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=date] {
-  border-color: : var(--primary);
-}
-
-input[type=text]:hover,
-input[type=password]:hover,
-input[type=email]:hover,
-input[type=date]:hover,
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=email]:focus,
-input[type=date]:focus {
-  border-color: var(--harsh);
-}
-/*--------------Intupts--ende--------------------*/
-
-/* Style des Formular-Buttons */
-button[type=submit],
-button[type=reset],
-button[type=button] {
-  background-color: var(--primary);
-}
-
-button[type=button]:hover,
-button[type=reset]:hover,
-button[type=submit]:hover {
-  background-color: var(--dark);
-  border-color: var(--harsh);
+.row {
+  padding: 5px 0;
 }

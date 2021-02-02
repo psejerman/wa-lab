@@ -1,9 +1,17 @@
-function showNavigator() {
+function initialize() {
   document.getElementById("navigator-type").innerHTML =
-  "Browser: " + navigator.appName;
+  'Browser: <span class="badge bg-info">'
+  + navigator.appName
+  + '</span>';
+
+  loadContent('home');
+  setVisitTime();
 }
 
-
+function setVisitTime() {
+  document.cookie = 'last_visit=' + newDate();
+  //alert(new Date());
+}
 
 function loadContent(param) {
   // Instanz von XMLHttpRequest()
@@ -23,7 +31,7 @@ function loadContent(param) {
 function sendForm() {
 
   //Anzahl der Formularelemente bestimmen
-  var elements = document.getElementById("formular1").elements;
+  var elements = document.getElementById('formular1').elements;
   var formData ={};
   for(var i = 0 ; i < elements.length ; i++){
       var item = elements.item(i);
@@ -35,7 +43,11 @@ function sendForm() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       //Schreiben der serverside Antwort ins demo-div
-     document.getElementById("srv-answer").innerHTML = this.responseText;
+     document.getElementById('srv-answer').innerHTML =
+     '<div class="alert alert-success" role="alert"><pre> Serverantwort:'
+      + JSON.stringify(JSON.parse(this.responseText), undefined, 3)
+      + '</pre></div>';
+
     }
   };
   //Definieren der Verbindungsparameter zum Serversidescript
