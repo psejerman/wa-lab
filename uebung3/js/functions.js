@@ -112,3 +112,12 @@ function deleteCanvas() {
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.beginPath();
 }
+
+function testDebugger() {
+  var wert = "Hallo";
+  console.log(wert);
+  debugger;
+  wert += 1;
+  console.log(wert);
+  debugger;
+}
