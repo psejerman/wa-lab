@@ -1,4 +1,7 @@
 function initialize() {
+  //Debugnachricht
+  console.log(getFunctionname(arguments.callee.toString()));
+
   document.getElementById("navigator-type").innerHTML =
   'Browser: <span class="badge bg-info">'
   + navigator.appName
@@ -10,10 +13,14 @@ function initialize() {
 }
 
 function setCookie() {
+  //Debugnachricht
+  console.log(getFunctionname(arguments.callee.toString()));
   document.cookie = 'username=Lassma Ballernsson';
 }
 
 function getCookie() {
+  //Debugnachricht
+  console.log(getFunctionname(arguments.callee.toString()));
   var decodedCookie = decodeURIComponent(document.cookie);
   var cookieArray = decodedCookie.split(';');
   document.getElementById('visitor-name').innerHTML =
@@ -21,6 +28,8 @@ function getCookie() {
 }
 
 function loadContent(param) {
+  //Debugnachricht
+  console.log(getFunctionname(arguments.callee.toString()));
   // Instanz von XMLHttpRequest()
   var xhttp = new XMLHttpRequest();
   //Verhalten bei Eingang von Antwort
@@ -36,6 +45,8 @@ function loadContent(param) {
 }
 
 function sendForm() {
+  //Debugnachricht
+  console.log(getFunctionname(arguments.callee.toString()));
   //Anzahl der Formularelemente bestimmen
   var elements = document.getElementById('formular1').elements;
   //formData-Objektdeklaration;
@@ -65,6 +76,8 @@ function sendForm() {
 }
 
 function resetForm() {
+  //Debugnachricht
+  console.log(getFunctionname(arguments.callee.toString()));
   var form = document.forms['formular1'];
   form['email'].value = 'lasse.bluten@gmx.de';
   form['name'].value = 'Lasse Bluten';
@@ -74,6 +87,8 @@ function resetForm() {
 }
 
 function canvasAnimation() {
+  //Debugnachricht
+  console.log(getFunctionname(arguments.callee.toString()));
   var canvas = document.getElementById("animation");
   var context = canvas.getContext("2d");
 
@@ -107,6 +122,8 @@ function canvasAnimation() {
 }
 
 function deleteCanvas() {
+  //Debugnachricht
+  console.log(getFunctionname(arguments.callee.toString()));
   var canvas = document.getElementById("animation");
   var context = canvas.getContext("2d");
   context.clearRect(0, 0, canvas.width, canvas.height);
@@ -114,10 +131,17 @@ function deleteCanvas() {
 }
 
 function testDebugger() {
+  //Debugnachricht
+  console.log(getFunctionname(arguments.callee.toString()));
   var wert = "Hallo";
   console.log(wert);
   debugger;
   wert += 1;
   console.log(wert);
   debugger;
+}
+function getFunctionname(funcName) {
+  funcName = funcName.substr('function '.length);
+  funcName = funcName.substr(0, funcName.indexOf('('));
+  return 'Aufruf von:' + funcName;
 }
