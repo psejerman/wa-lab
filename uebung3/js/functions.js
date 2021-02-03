@@ -1,7 +1,6 @@
 function initialize() {
   //Debugnachricht
   console.log(getFunctionname(arguments.callee.toString()));
-
   document.getElementById("navigator-type").innerHTML =
   'Browser: <span class="badge bg-info">'
   + navigator.appName
@@ -91,8 +90,6 @@ function canvasAnimation() {
   console.log(getFunctionname(arguments.callee.toString()));
   var canvas = document.getElementById("animation");
   var context = canvas.getContext("2d");
-
-
   var coords = [
     [150, 0],
     [150, 100],
@@ -102,11 +99,6 @@ function canvasAnimation() {
   // Cursor reset
   context.moveTo(0, 0);
 
-  /*for (var i = 0; i < coords.length; ++i) {
-    ctx.lineTo(coords[i][0], coords[i][1]);
-    ctx.moveTo(coords[i][0], coords[i][1]);
-    ctx.stroke();
-  }*/
   var i = 0;
   setInterval(function(){
     if(i == coords.length) {
