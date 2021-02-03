@@ -38,7 +38,9 @@ function loadContent(param) {
 function sendForm() {
   //Anzahl der Formularelemente bestimmen
   var elements = document.getElementById('formular1').elements;
-  var formData ={};
+  //formData-Objektdeklaration;
+  var formData = {};
+  // Kontruieren des Formularobjekts inklusive Eingabewerte
   for(var i = 0 ; i < elements.length ; i++){
       var item = elements.item(i);
       formData[item.name] = item.value;
@@ -53,7 +55,6 @@ function sendForm() {
      '<div class="alert alert-success" role="alert"><pre> Serverantwort:'
       + JSON.stringify(JSON.parse(this.responseText), undefined, 3)
       + '</pre></div>';
-
     }
   };
   //Definieren der Verbindungsparameter zum Serversidescript
@@ -74,21 +75,39 @@ function resetForm() {
 
 function canvasAnimation() {
   var canvas = document.getElementById("animation");
-  var ctx = canvas.getContext("2d");
+  var context = canvas.getContext("2d");
 
 
   var coords = [
     [150, 0],
     [150, 100],
-    [-150, 100],
-    [0, -100]
+    [0, 100],
+    [0, 0]
   ];
-  ctx.moveTo(0, 0);
+  // Cursor reset
+  context.moveTo(0, 0);
 
-  for (var i = 0; i < coords.length; ++i) {
+  /*for (var i = 0; i < coords.length; ++i) {
     ctx.lineTo(coords[i][0], coords[i][1]);
-
     ctx.moveTo(coords[i][0], coords[i][1]);
     ctx.stroke();
-  }
+  }*/
+  var i = 0;
+  setInterval(function(){
+    if(i == coords.length) {
+      return 0;
+    }
+    console.log(i);
+    context.lineTo(coords[i][0], coords[i][1]);
+    context.moveTo(coords[i][0], coords[i][1]);
+    context.stroke();
+    i++;
+
+  }, 2000);
+}
+
+function deleteCanvas() {
+  var canvas = document.getElementById("animation");
+  var context = canvas.getContext("2d");
+  context.clearRect(0, 0, canvas.width, canvas.height);
 }
