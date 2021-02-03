@@ -76,4 +76,19 @@ function canvasAnimation() {
   var canvas = document.getElementById("animation");
   var ctx = canvas.getContext("2d");
 
+
+  var coords = [
+    [150, 0],
+    [150, 100],
+    [-150, 100],
+    [0, -100]
+  ];
+  ctx.moveTo(0, 0);
+
+  for (var i = 0; i < coords.length; ++i) {
+    ctx.lineTo(coords[i][0], coords[i][1]);
+
+    ctx.moveTo(coords[i][0], coords[i][1]);
+    ctx.stroke();
+  }
 }
