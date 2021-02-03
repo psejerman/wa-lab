@@ -71,3 +71,9 @@ function resetForm() {
   form['date'].value = '2021-02-02';
   form['gender'].value = 'other';
 }
+
+function canvasAnimation() {
+  var canvas = document.getElementById("animation");
+  var ctx = canvas.getContext("2d");
+
+}
