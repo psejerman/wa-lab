@@ -97,7 +97,7 @@ function canvasAnimation() {
     if(i == coords.length) {
       return 0;
     }
-    console.log(i);
+    console.log("Durchlauf " + i);
     context.lineTo(coords[i][0], coords[i][1]);
     context.moveTo(coords[i][0], coords[i][1]);
     context.stroke();
