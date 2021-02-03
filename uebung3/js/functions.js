@@ -14,14 +14,11 @@ function setCookie() {
 }
 
 function getCookie() {
-  var name = 'username=';
   var decodedCookie = decodeURIComponent(document.cookie);
   var cookieArray = decodedCookie.split(';');
-  //alert(cookieArray);
   document.getElementById('visitor-name').innerHTML =
-  '<span>Cookie:</br> '+ cookieArray + '</span>';
+    '<span>Cookie:</br> '+ cookieArray + '</span>';
 }
-
 
 function loadContent(param) {
   // Instanz von XMLHttpRequest()
@@ -39,7 +36,6 @@ function loadContent(param) {
 }
 
 function sendForm() {
-
   //Anzahl der Formularelemente bestimmen
   var elements = document.getElementById('formular1').elements;
   var formData ={};
@@ -65,4 +61,13 @@ function sendForm() {
   xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   //Dekodieren des JSON-Formulardaten in Stirngform und Absenden
   xhttp.send("json_data=" + JSON.stringify(formData));
+}
+
+function resetForm() {
+  var form = document.forms['formular1'];
+  form['email'].value = 'lasse.bluten@gmx.de';
+  form['name'].value = 'Lasse Bluten';
+  form['password'].value = 'Test1234!';
+  form['date'].value = '2021-02-02';
+  form['gender'].value = 'other';
 }
