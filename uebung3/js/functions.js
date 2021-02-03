@@ -5,13 +5,23 @@ function initialize() {
   + '</span>';
 
   loadContent('home');
-  setVisitTime();
+  setCookie();
+  getCookie();
 }
 
-function setVisitTime() {
-  document.cookie = 'last_visit=' + newDate();
-  //alert(new Date());
+function setCookie() {
+  document.cookie = 'username=Lassma Ballernsson';
 }
+
+function getCookie() {
+  var name = 'username=';
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var cookieArray = decodedCookie.split(';');
+  //alert(cookieArray);
+  document.getElementById('visitor-name').innerHTML =
+  '<span>Cookie:</br> '+ cookieArray + '</span>';
+}
+
 
 function loadContent(param) {
   // Instanz von XMLHttpRequest()
